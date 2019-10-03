@@ -1,6 +1,6 @@
 FROM ruby:2.3
 
-RUN gem install puma sinatra puma-metrics
+RUN gem install puma sinatra puma-metrics pg
 
 USER 1000
 COPY ./ /code
