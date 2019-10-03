@@ -10,6 +10,7 @@ class Application < Sinatra::Base
 
   get '/pg' do
     con = PG.connect(
+      :host => ENV['DB_HOST'],
       :dbname => ENV['DB_NAME'],
       :user => ENV['DB_USER'],
       :password => ENV['DB_PASSWORD']
