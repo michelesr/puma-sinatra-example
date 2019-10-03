@@ -10,9 +10,9 @@ class Application < Sinatra::Base
 
   get '/pg' do
     con = PG.connect(
-      :dbname ENV['DB_NAME'],
-      :user ENV['DB_USER'],
-      :password ENV['DB_PASSWORD']
+      :dbname => ENV['DB_NAME'],
+      :user => ENV['DB_USER'],
+      :password => ENV['DB_PASSWORD']
     )
 
     rs = con.exec('SELECT VERSION()')
