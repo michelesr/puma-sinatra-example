@@ -21,3 +21,6 @@ port ENV.fetch('PORT') { 3000 }
 # processes).
 #
 workers ENV.fetch('WORKERS') { 1 }.to_i
+
+# Load metrics plugin
+plugin 'metrics'
